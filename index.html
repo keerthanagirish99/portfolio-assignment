@@ -31,12 +31,14 @@
         <div class="page active" id="home">
             <section class="home-hero">
                 <div class="hero-container">
+                    <!-- Hero Text -->
                     <div class="hero-text">
                         <h1>Keerthana Girish</h1>
                         <p>Hello! I'm Keerthana Girish, a student and aspiring full-stack developer passionate about exploring new technologies and crafting meaningful digital experiences. I enjoy turning ideas into elegant solutions, blending creativity with clean, efficient code.</p>
                         <button class="hero-button" onclick="navigateTo('projects')">View My Projects</button>
                     </div>
 
+                    <!-- Hero Video -->
                     <div class="hero-image">
                         <video src="developer.mp4" autoplay muted loop playsinline></video>
                     </div>
@@ -149,9 +151,9 @@
                         <p>An interactive coding challenge platform that helps users sharpen their programming skills.</p>
                         <button class="project-link" onclick="alert('Visit: github.com/keerthanagirish/codequest')">View Project</button>
                     </div>
-                </div>
-            </div>
-        </div>
+                </div> <!-- projects-grid -->
+            </div> <!-- projects-container -->
+        </div> <!-- projects page -->
 
         <!-- ACHIEVEMENTS PAGE -->
         <div class="page" id="achievements">
@@ -257,7 +259,7 @@
             navLinks.forEach(link => link.classList.remove('active'));
 
             document.getElementById(pageName).classList.add('active');
-            document.querySelector(`[data-page="${pageName}"]`).classList.add('active');
+            document.querySelector([data-page="${pageName}"]).classList.add('active');
 
             window.scrollTo(0, 0);
         }
@@ -273,9 +275,12 @@
         function handleSubmit(event) {
             event.preventDefault();
             const name = document.getElementById('name').value;
-            alert(`Thank you, ${name}! Your message has been sent successfully. I'll get back to you soon!`);
+            alert(Thank you, ${name}! Your message has been sent successfully. I'll get back to you soon!);
             event.target.reset();
         }
     </script>
 </body>
 </html>
+
+
+---
